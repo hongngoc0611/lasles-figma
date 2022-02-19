@@ -1,0 +1,86 @@
+.hero{
+    padding-bottom: 100px;
+    &-container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 0 40px;
+        position: relative;
+    }
+    &-content{
+        width: 100%;
+        max-width: 555px;
+
+    }
+  
+    &-heading{
+        font-size: 50px;
+        font-weight: 500;
+        margin-bottom: 20px;
+        line-height: calc(70 / 50);
+    }
+    &-desc{
+        margin-bottom: 50px;    
+        
+    }
+    .button{
+    animation-name: UpDown;
+    animation-duration: 1s;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear; 
+    animation: UpDown 2s infinite linear;
+    }
+
+}
+@media screen and (min-width: 1280px) {
+    .hero-image{
+        position: absolute;
+        top: 50%;
+        transform: translate(40px, -50%);
+        right: 0;
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    .hero-heading{
+        font-size: 35px;
+    }
+    .hero{
+        padding-bottom: 50px;
+    }
+    
+
+}
+@media screen and (max-width: 767.98px) {
+    .hero-container{
+        flex-direction: column;
+        gap: 50px 0;
+    }
+    .hero-desc{
+        margin-bottom: 25px;
+    }
+}   
+
+
+
+
+@keyframes UpDown{
+    /* 100s */
+    0%{
+    }
+   
+    25%{
+        transform: translateY(15px);
+    }
+  
+    50%{
+        transform: translateY(0);
+    }
+    75%{
+        transform: translateY(-15px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
